@@ -73,6 +73,12 @@
     <feature name="Keyboard">
         <param name="ios-package" onload="true" value="IonicKeyboard" />
     </feature>
+    <feature name="Geolocation">
+        <param name="ios-package" value="CDVLocation" />
+    </feature>
+    <feature name="Compass">
+        <param name="ios-package" value="CDVCompass" />
+    </feature>
     <name>Splinxs</name>
     <description>The real-time trourist guidance</description>
     <author email="info.splinxs@gmail.com" href="www.splinxs.com">Splinxs Team</author>
@@ -87,6 +93,7 @@
     <allow-intent href="geo:*" />
     <allow-navigation href="http://192.168.178.36:8100" />
     <allow-navigation href="http://127.0.0.1:8100" />
+    <allow-navigation href="http://169.254.251.96:8100" />
     <allow-intent href="itms:*" />
     <allow-intent href="itms-apps:*" />
     <icon height="57" src="resources/ios/icon/icon.png" width="57" />

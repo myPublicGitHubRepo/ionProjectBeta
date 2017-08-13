@@ -72,7 +72,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var languageStorageKey = "addedLanguages";
 var LanguagesPage = (function () {
     function LanguagesPage(navCtrl, navParams, http) {
-        var _this = this;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.languages = [];
@@ -82,24 +81,25 @@ var LanguagesPage = (function () {
         this.searching = false;
         this.loadAddedLanguagesFromLocalStorage();
         //TODO delet this and get from navparams
-        http.get("https://splinxs.com/fullLangs.json").map(function (res) { return res.json(); }).subscribe(function (data) {
-            //this.languages = data;
-            console.log(data);
-            for (var _i = 0, data_1 = data; _i < data_1.length; _i++) {
-                var lang = data_1[_i];
-                //set german isOnline to false for testing purpose
-                if (lang.name == "German")
-                    _this.languages.push({ name: lang.name, nativeName: lang.nativeName, code: lang.code, isOnline: false });
-                else
-                    _this.languages.push({ name: lang.name, nativeName: lang.nativeName, code: lang.code, isOnline: true });
-            }
-            _this.languages = _this.removeAddedlanguagesFromAvailableLanguages(_this.languages);
-            _this.filteredLanguages = _this.languages;
+        /*
+        http.get("https://splinxs.com/fullLangs.json").map(res => res.json()).subscribe(data => {
+    
+          //this.languages = data;
+          console.log(data);
+          for (let lang of data) {
+    
+            //set german isOnline to false for testing purpose
+            if (lang.name == "German") this.languages.push({ name: lang.name, nativeName: lang.nativeName, code: lang.code, isOnline: false });
+            else this.languages.push({ name: lang.name, nativeName: lang.nativeName, code: lang.code, isOnline: true });
+          }
+          this.languages = this.removeAddedlanguagesFromAvailableLanguages(this.languages);
+          this.filteredLanguages = this.languages;
         });
+        */
         //TODO uncomment this
-        //this.languages = navParams.data;
-        //this.languages = this.removeAddedlanguagesFromAvailableLanguages(this.languages);
-        //this.filteredLanguages = this.languages;
+        this.languages = navParams.data;
+        this.languages = this.removeAddedlanguagesFromAvailableLanguages(this.languages);
+        this.filteredLanguages = this.languages;
         this.searchControl = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]();
         //TODO if a language is not online but is saved in the local storage, remove from it!!
     }
@@ -201,7 +201,7 @@ var LanguagesPage = (function () {
 LanguagesPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["d" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-languages',template:/*ion-inline-start:"/Users/Zerododici/git/splinxsReal/splinxs/src/pages/languages/languages.html"*/'<!--\n  Generated template for the LanguagesPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n    <ion-navbar color="white">\n        <img class="stepsImg" src="assets/img/step1.png" />\n\n        <ion-buttons end>\n            <button ion-button icon-end clear [disabled]="addedLanguages.length<=0" (tap)="nextPage()">\n            Next\n            <ion-icon name="arrow-forward" ></ion-icon>\n          </button>\n        </ion-buttons>\n    </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n    <!--<img class="stepsImg" src="../../assets/img/step1.png" />-->\n\n    <ion-searchbar class="stickyHeader" [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()"></ion-searchbar>\n\n    <div *ngIf="searching" class="spinner-container">\n        <ion-spinner></ion-spinner>\n    </div>\n    <ion-list>\n        <div *ngIf="addedLanguages.length>0">\n            <ion-item-divider sticky color="light">added languages</ion-item-divider>\n\n            <ion-item [@itemAnim] *ngFor="let lang of addedLanguages" (tap)="removeLanguage(lang)">\n                {{lang.nativeName}} ({{lang.name}})\n                <!--\n              <button ion-button icon-end icon-only clear>\n                  <ion-icon name="remove-circle"></ion-icon>\n              </button>-->\n                <button ion-button outline item-end>Remove</button>\n            </ion-item>\n\n\n        </div>\n        <ion-item-divider sticky color="light">Avariable languages</ion-item-divider>\n\n        <ion-item [@itemAnim] *ngFor="let lang of filteredLanguages;" (tap)="addLanguage(lang)">\n            <span [style.color]="lang.isOnline  ? \'black\' : \'gray\'">{{lang.nativeName}} ({{lang.name}})</span>\n            <!--\n            <button ion-button icon-end icon-only clear>\n            \n            <ion-icon name="add-circle" *ngIf="lang.isOnline"></ion-icon>\n            <ion-icon name="information-circle" *ngIf="!lang.isOnline"></ion-icon>\n           </button>\n          -->\n            <button ion-button outline *ngIf="lang.isOnline" item-end>Add</button>\n            <button ion-button outline *ngIf="!lang.isOnline" item-end>Info</button>\n\n        </ion-item>\n    </ion-list>\n\n</ion-content>'/*ion-inline-end:"/Users/Zerododici/git/splinxsReal/splinxs/src/pages/languages/languages.html"*/,
+        selector: 'page-languages',template:/*ion-inline-start:"/Users/Zerododici/git/ionProjectBeta/src/pages/languages/languages.html"*/'<!--\n  Generated template for the LanguagesPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n    <ion-navbar color="white">\n        <img class="stepsImg" src="assets/img/step1.png" />\n\n        <ion-buttons end>\n            <button ion-button icon-end clear [disabled]="addedLanguages.length<=0" (tap)="nextPage()">\n            Next\n            <ion-icon name="arrow-forward" ></ion-icon>\n          </button>\n        </ion-buttons>\n    </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n    <!--<img class="stepsImg" src="../../assets/img/step1.png" />-->\n\n    <ion-searchbar class="stickyHeader" [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()"></ion-searchbar>\n\n    <div *ngIf="searching" class="spinner-container">\n        <ion-spinner></ion-spinner>\n    </div>\n    <ion-list>\n        <div *ngIf="addedLanguages.length>0">\n            <ion-item-divider sticky color="light">added languages</ion-item-divider>\n\n            <ion-item [@itemAnim] *ngFor="let lang of addedLanguages" (tap)="removeLanguage(lang)">\n                {{lang.nativeName}} ({{lang.name}})\n                <!--\n              <button ion-button icon-end icon-only clear>\n                  <ion-icon name="remove-circle"></ion-icon>\n              </button>-->\n                <button ion-button outline item-end>Remove</button>\n            </ion-item>\n\n\n        </div>\n        <ion-item-divider sticky color="light">Avariable languages</ion-item-divider>\n\n        <ion-item [@itemAnim] *ngFor="let lang of filteredLanguages;" (tap)="addLanguage(lang)">\n            <span [style.color]="lang.isOnline  ? \'black\' : \'gray\'">{{lang.nativeName}} ({{lang.name}})</span>\n            <!--\n            <button ion-button icon-end icon-only clear>\n            \n            <ion-icon name="add-circle" *ngIf="lang.isOnline"></ion-icon>\n            <ion-icon name="information-circle" *ngIf="!lang.isOnline"></ion-icon>\n           </button>\n          -->\n            <button ion-button outline *ngIf="lang.isOnline" item-end>Add</button>\n            <button ion-button outline *ngIf="!lang.isOnline" item-end>Info</button>\n\n        </ion-item>\n    </ion-list>\n\n</ion-content>'/*ion-inline-end:"/Users/Zerododici/git/ionProjectBeta/src/pages/languages/languages.html"*/,
         animations: [
             Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* trigger */])('itemAnim', [
                 Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* state */])('void', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* style */])({ opacity: 0 })),

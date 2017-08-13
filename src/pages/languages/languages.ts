@@ -57,6 +57,7 @@ export class LanguagesPage {
 
 
     //TODO delet this and get from navparams
+    /*
     http.get("https://splinxs.com/fullLangs.json").map(res => res.json()).subscribe(data => {
 
       //this.languages = data;
@@ -70,11 +71,12 @@ export class LanguagesPage {
       this.languages = this.removeAddedlanguagesFromAvailableLanguages(this.languages);
       this.filteredLanguages = this.languages;
     });
+    */
 
     //TODO uncomment this
-    //this.languages = navParams.data;
-    //this.languages = this.removeAddedlanguagesFromAvailableLanguages(this.languages);
-    //this.filteredLanguages = this.languages;
+    this.languages = navParams.data;
+    this.languages = this.removeAddedlanguagesFromAvailableLanguages(this.languages);
+    this.filteredLanguages = this.languages;
     this.searchControl = new FormControl();
 
     //TODO if a language is not online but is saved in the local storage, remove from it!!
@@ -176,7 +178,6 @@ export class LanguagesPage {
       languages = languages.filter(item => item !== lang);
     }
     return languages;
-
   }
 
   saveAddedLanguagesInLocalStorage() {
