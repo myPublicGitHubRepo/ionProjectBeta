@@ -1,0 +1,32 @@
+<ion-header>
+
+    <ion-navbar color="white">
+        <img class="stepsImg" src="assets/img/step2.png" />
+
+        <ion-buttons end>
+            <button ion-button icon-end clear (tap)="nextPage()">
+            Next
+            <ion-icon name="arrow-forward" ></ion-icon>
+          </button>
+        </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+
+
+
+
+<ion-content>
+    <!--<img class="stepsImg" style="opacity: 0.5;" src="../../assets/img/step2.png" />-->
+    <div id="map"></div>
+    <div [@popupAnim] class="gpsLoad" *ngIf="gspIsLoading">
+        <br>
+        <br>
+        <h1 padding>Getting your current location...</h1>
+        <button style=" margin:0 auto;display:block;" ion-button (tap)="cancelGPS()">Cancel</button>
+
+        <div class="wave3l"></div>
+        <div class="wave2l"></div>
+        <div class="wave1l"></div>
+    </div>
+</ion-content>

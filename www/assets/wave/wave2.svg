@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="491px" height="124px" viewBox="0 0 491 124" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="75.0342634%" id="linearGradient-1">
+            <stop stop-color="#24CB9C" stop-opacity="0.5" offset="0%"></stop>
+            <stop stop-color="#24CB9C" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M245.482752,9.23436869 C283.652986,9.23436869 373.387379,39.0131978 417.590504,46.0624937 C461.793629,53.1117895 490.965504,53.1117895 490.965504,53.1117895 L490.965504,124.106948 L0,124.106948 L0,53.1117895 C0,53.1117895 64.3170665,62.5976499 105.988942,53.1117895 C147.660817,43.6259292 177,9.23436869 245.482752,9.23436869 Z" id="wave2" fill="url(#linearGradient-1)"></path>
+        <g id="Artboard"></g>
+    </g>
+</svg>

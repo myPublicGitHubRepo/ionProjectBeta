@@ -1,0 +1,45 @@
+{
+  "_from": "git+https://github.com/mapsplugin/cordova-plugin-googlemaps-sdk.git",
+  "_id": "cordova-plugin-googlemaps-sdk@2.2.0-fixed",
+  "_inBundle": false,
+  "_integrity": "sha1-oZ2psKH+lH31gnOvOXFh3a+Oos0=",
+  "_location": "/cordova-plugin-googlemaps-sdk",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/mapsplugin/cordova-plugin-googlemaps-sdk",
+    "rawSpec": "https://github.com/mapsplugin/cordova-plugin-googlemaps-sdk",
+    "saveSpec": "git+https://github.com/mapsplugin/cordova-plugin-googlemaps-sdk.git",
+    "fetchSpec": "https://github.com/mapsplugin/cordova-plugin-googlemaps-sdk.git",
+    "gitCommittish": "master"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/mapsplugin/cordova-plugin-googlemaps-sdk.git#673ccad1aeb8386606bc326fd5d577bf19ac67d8",
+  "_spec": "https://github.com/mapsplugin/cordova-plugin-googlemaps-sdk",
+  "_where": "/Users/Zerododici/git/splinxsReal/splinxs/node_modules",
+  "author": {
+    "name": "Masashi Katsumata, Hirbod Mirjavadi"
+  },
+  "bugs": {
+    "url": "https://github.com/mapsplugin/cordova-plugin-googlemaps-sdk/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-googlemaps-sdk",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "deprecated": false,
+  "description": "Google Maps SDK for iOS for Cordova (files are copied from Google)",
+  "homepage": "https://github.com/mapsplugin/cordova-plugin-googlemaps-sdk#readme",
+  "name": "cordova-plugin-googlemaps-sdk",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mapsplugin/cordova-plugin-googlemaps-sdk.git"
+  },
+  "version": "2.2.0-fixed"
+}

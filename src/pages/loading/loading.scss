@@ -1,0 +1,62 @@
+page-loading {
+    .wave1l {
+        background: url(../assets/wave/wave1.svg) repeat-x;
+        position: absolute;
+        bottom: -30px;
+        width: 1940px;
+        height: 124px;
+        animation: wave1l 10s ease infinite;
+        transform: translate3d(-20px, +25px, 0);
+    }
+    .wave2l {
+        background: url(../assets/wave/wave2.svg) repeat-x;
+        position: absolute;
+        bottom: -30px;
+        width: 1940px;
+        height: 124px;
+        animation: wave2l 10s ease infinite;
+        transform: translate3d(-150px, +20px, 0);
+    }
+    .wave3l {
+        background: url(../assets/wave/wave3.svg) repeat-x;
+        position: absolute;
+        bottom: -30px;
+        width: 1940px;
+        height: 124px;
+        animation: wave3l 10s ease infinite;
+        transform: translate3d(-370px, +5px, 0);
+    }
+    @keyframes wave1l {
+        0% {
+            transform: translate3d(-250px, +10px, 0);
+        }
+        50% {
+            transform: translate3d(-20px, +25px, 0);
+        }
+        100% {
+            transform: translate3d(-250px, +10px, 0);
+        }
+    }
+    @keyframes wave2l {
+        0% {
+            transform: translate3d(-550px, +10px, 0);
+        }
+        50% {
+            transform: translate3d(-150px, +20px, 0);
+        }
+        100% {
+            transform: translate3d(-550px, +10px, 0);
+        }
+    }
+    @keyframes wave3l {
+        0% {
+            transform: translate3d(-700px, +5px, 0);
+        }
+        50% {
+            transform: translate3d(-370px, +5px, 0);
+        }
+        100% {
+            transform: translate3d(-700px, +5px, 0);
+        }
+    }
+}

@@ -1,0 +1,63 @@
+<!--
+  Generated template for the LanguagesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar color="white">
+        <img class="stepsImg" src="assets/img/step1.png" />
+
+        <ion-buttons end>
+            <button ion-button icon-end clear [disabled]="addedLanguages.length<=0" (tap)="nextPage()">
+            Next
+            <ion-icon name="arrow-forward" ></ion-icon>
+          </button>
+        </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <!--<img class="stepsImg" src="../../assets/img/step1.png" />-->
+
+    <ion-searchbar class="stickyHeader" [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()"></ion-searchbar>
+
+    <div *ngIf="searching" class="spinner-container">
+        <ion-spinner></ion-spinner>
+    </div>
+    <ion-list>
+        <div *ngIf="addedLanguages.length>0">
+            <ion-item-divider sticky color="light">added languages</ion-item-divider>
+
+            <ion-item [@itemAnim] *ngFor="let lang of addedLanguages" (tap)="removeLanguage(lang)">
+                {{lang.nativeName}} ({{lang.name}})
+                <!--
+              <button ion-button icon-end icon-only clear>
+                  <ion-icon name="remove-circle"></ion-icon>
+              </button>-->
+                <button ion-button outline item-end>Remove</button>
+            </ion-item>
+
+
+        </div>
+        <ion-item-divider sticky color="light">Avariable languages</ion-item-divider>
+
+        <ion-item [@itemAnim] *ngFor="let lang of filteredLanguages;" (tap)="addLanguage(lang)">
+            <span [style.color]="lang.isOnline  ? 'black' : 'gray'">{{lang.nativeName}} ({{lang.name}})</span>
+            <!--
+            <button ion-button icon-end icon-only clear>
+            
+            <ion-icon name="add-circle" *ngIf="lang.isOnline"></ion-icon>
+            <ion-icon name="information-circle" *ngIf="!lang.isOnline"></ion-icon>
+           </button>
+          -->
+            <button ion-button outline *ngIf="lang.isOnline" item-end>Add</button>
+            <button ion-button outline *ngIf="!lang.isOnline" item-end>Info</button>
+
+        </ion-item>
+    </ion-list>
+
+</ion-content>

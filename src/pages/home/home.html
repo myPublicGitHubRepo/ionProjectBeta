@@ -1,0 +1,55 @@
+<ion-header>
+    <ion-navbar color="white">
+        <img style="padding-left:5px; max-height:40px" src="assets/img/splinxsLogo.svg" />
+
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <h1>Welcome to splinxs</h1>
+
+    <p>
+        Splinxs is an app for tourists bla bla bla
+    </p>
+    <div class="scale">
+        <img class="scale" src="assets/img/scale.png" />
+    </div>
+    <div>
+        <div style="height: 70px;     margin-left: 50px;">
+            <p><b>Select your spoken languages </b></p>
+            <p style="color:gray">A guide that speaks you same language will be connected with you</p>
+        </div>
+        <div style="height: 70px;     margin-left: 50px;">
+
+            <p><b>Choose the desired location</b></p>
+            <p style="color:gray">A guide know the selekted area will be connected whit you</p>
+        </div>
+        <div style="height: 66px;     margin-left: 50px;">
+
+            <p><b>enter your name</b></p>
+            <p style="color:gray">Be nice, it's not funny to chat whit an anonymous person</p>
+        </div>
+        <br>
+        <br>
+
+
+    </div>
+
+    <button style=" margin:0 auto;display:block;" ion-button icon-right (tap)="goToLanguages()" [disabled]="this.languages.length <= 0">
+    OK! Let's start
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    <!--
+    <button ion-button icon-right outline (tap)="goToLocation()">
+    Location shortcut
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>-->
+
+
+
+    <div class="wave3"></div>
+    <div class="wave2"></div>
+    <div class="wave1"></div>
+
+
+</ion-content>

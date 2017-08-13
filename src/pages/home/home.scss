@@ -1,0 +1,64 @@
+page-home {
+    .navbar {
+        .toolbar-background {
+            background: transparent;
+        }
+    }
+    .scale {
+        height: 200px;
+        width: auto;
+        margin-right: 10px;
+        float: left;
+    }
+    .wave1 {
+        background: url(../assets/wave/wave1.svg) repeat-x;
+        position: absolute;
+        bottom: -30px;
+        width: 1940px;
+        height: 124px;
+        animation: wave1 5s ease;
+        transform: translate3d(-20px, +25px, 0);
+    }
+    .wave2 {
+        background: url(../assets/wave/wave2.svg) repeat-x;
+        position: absolute;
+        bottom: -30px;
+        width: 1940px;
+        height: 124px;
+        animation: wave2 5s ease;
+        transform: translate3d(-150px, +20px, 0);
+    }
+    .wave3 {
+        background: url(../assets/wave/wave3.svg) repeat-x;
+        position: absolute;
+        bottom: -30px;
+        width: 1940px;
+        height: 124px;
+        animation: wave3 5s ease;
+        transform: translate3d(-370px, +5px, 0);
+    }
+    @keyframes wave1 {
+        0% {
+            transform: translate3d(-250px, +10px, 0);
+        }
+        100% {
+            transform: translate3d(-20px, +25px, 0);
+        }
+    }
+    @keyframes wave2 {
+        0% {
+            transform: translate3d(-550px, +10px, 0);
+        }
+        100% {
+            transform: translate3d(-150px, +20px, 0);
+        }
+    }
+    @keyframes wave3 {
+        0% {
+            transform: translate3d(-700px, +5px, 0);
+        }
+        100% {
+            transform: translate3d(-370px, +5px, 0);
+        }
+    }
+}

@@ -1,0 +1,53 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "ch.splinxs.splinxs"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "ch.splinxs.splinxs"
+        },
+        "cordova-plugin-googlemaps": {
+            "API_KEY_FOR_IOS": "AIzaSyAMzA3uW_adb3BLUGOIPbaWE-GAnS1Ev7w",
+            "LOCATION_WHEN_IN_USE_DESCRIPTION": "Show your location on the map",
+            "LOCATION_ALWAYS_USAGE_DESCRIPTION": "Trace your location on the map",
+            "PACKAGE_NAME": "ch.splinxs.splinxs"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "ch.splinxs.splinxs"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "ch.splinxs.splinxs"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "ch.splinxs.splinxs"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "ch.splinxs.splinxs"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "ch.splinxs.splinxs"
+        },
+        "cordova-plugin-geolocation": {
+            "GEOLOCATION_USAGE_DESCRIPTION": " ",
+            "PACKAGE_NAME": "ch.splinxs.splinxs"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "ch.splinxs.splinxs"
+        }
+    },
+    "dependent_plugins": {
+        "com.googlemaps.ios": {
+            "PACKAGE_NAME": "ch.splinxs.splinxs"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "ch.splinxs.splinxs"
+        }
+    }
+}
